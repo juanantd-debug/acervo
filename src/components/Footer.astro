@@ -1,0 +1,91 @@
+---
+const currentYear = new Date().getFullYear();
+
+const navItems = [
+  { label: 'Soluciones', href: '#soluciones' },
+  { label: 'Capacidades', href: '#capacidades' },
+  { label: 'Método', href: '#metodo' },
+  { label: 'Sobre la firma', href: '#sobre' },
+  { label: 'Contacto', href: '#contacto' },
+];
+
+const legalItems = [
+  { label: 'Aviso legal', href: '/aviso-legal/' },
+  { label: 'Política de privacidad', href: '/politica-privacidad/' },
+  { label: 'Política de cookies', href: '/politica-cookies/' },
+];
+---
+
+<footer class="bg-[var(--color-navy)] text-white">
+  <div class="container-acervo">
+    <div class="grid gap-12 border-b border-white/10 py-14 lg:grid-cols-[1.1fr_0.9fr_0.9fr]">
+      <!-- Marca -->
+      <div>
+        <a href="/" class="flex items-center" aria-label="Ir al inicio de ACERVO LexFin">
+        <img
+            src="/images/acervo-logo.png"
+            alt="ACERVO LexFin"
+            class="h-14 w-auto"
+        />
+        </a>
+
+        <p class="max-w-md text-sm leading-7 text-white/70">
+          Despacho jurídico-financiero para decisiones complejas de empresa, entidades,
+          patrimonio y activos. Gobernanza, dirección financiera externa, fiscalidad compleja,
+          laboral estratégico y activos inmobiliarios.
+        </p>
+      </div>
+
+      <!-- Navegación -->
+      <div>
+        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">
+          Navegación
+        </p>
+
+        <nav class="grid gap-3" aria-label="Navegación del pie de página">
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-sm text-white/70 transition hover:text-white"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">
+          Información legal
+        </p>
+
+        <nav class="grid gap-3" aria-label="Enlaces legales">
+          {legalItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-sm text-white/70 transition hover:text-white"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <p class="mt-6 text-sm leading-7 text-white/55">
+          Los textos legales deberán revisarse y completarse con los datos reales de la titularidad,
+          domicilio, NIF/CIF, responsable del tratamiento y demás información exigible.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-4 py-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
+      <p>
+        © {currentYear} ACERVO LexFin. Todos los derechos reservados.
+      </p>
+
+      <p>
+        Web profesional en desarrollo.
+      </p>
+    </div>
+  </div>
+</footer>

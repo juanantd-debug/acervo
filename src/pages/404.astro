@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Página no encontrada | ACERVO LexFin"
+  description="La página solicitada no existe o ha sido movida."
+>
+  <main class="bg-[var(--color-cream)] pt-20">
+    <section class="section-acervo flex min-h-[70vh] items-center">
+      <div class="container-acervo">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
+            Error 404
+          </p>
+
+          <h1 class="mb-6 text-5xl font-semibold tracking-tight text-[var(--color-navy)] md:text-7xl">
+            Página no encontrada.
+          </h1>
+
+          <p class="mb-8 text-lg leading-8 text-[var(--color-charcoal)]/80 md:text-xl">
+            La página que buscas no existe, ha cambiado de ubicación o todavía no ha sido creada.
+          </p>
+
+          <a
+            href="/"
+            class="inline-flex items-center justify-center rounded-full bg-[var(--color-navy)] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[var(--color-charcoal)]"
+          >
+            Volver al inicio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

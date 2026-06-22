@@ -1,0 +1,151 @@
+---
+const mainSolutions = [
+  {
+    title: 'Socios, gobierno y reordenación societaria',
+    description:
+      'Entrada o salida en el capital, pactos de socios, órganos de gobierno, reorganizaciones, acuerdos y documentación de ejecución.',
+    tag: 'Gobernanza',
+  },
+  {
+    title: 'Arquitectura financiera y control',
+    description:
+      'Escenarios, cash-flow, estructura de deuda y capital, reporting para socios o dirección, cuadro de control y hoja de ruta.',
+    tag: 'Dirección externa',
+  },
+  {
+    title: 'Operación inmobiliaria segura',
+    description:
+      'Due diligence registral, catastral y urbanística, detección de riesgos, garantías, preparación registral y control de hitos.',
+    tag: 'Activos',
+  },
+  {
+    title: 'Financiación con preparación de comité',
+    description:
+      'Dossier, narrativa económica, estructura de la operación, garantías, covenants, negociación de términos y documentación asociada.',
+    tag: 'Financiación',
+  },
+  {
+    title: 'Distressed real estate: ejecuciones, subastas y NPLs',
+    description:
+      'Estrategia y ejecución en subastas, cesiones de remate, créditos dudosos, coordinación registral-catastral y control de evidencias.',
+    tag: 'Real estate',
+  },
+  {
+    title: 'Laboral estratégico y de contingencias',
+    description:
+      'Modelos de contratación, costes, protocolos internos, reorganizaciones, extinciones, contingencias y dirección letrada en jurisdicción social.',
+    tag: 'Laboral',
+  },
+];
+
+const secondarySolutions = [
+  {
+    title: 'Fiscalidad compleja y planificación patrimonial',
+    description:
+      'Estructura, protección patrimonial y sucesión con control del riesgo fiscal en decisiones críticas.',
+  },
+  {
+    title: 'Cooperativas, asociaciones y fundaciones',
+    description:
+      'Gobierno, estatutos, órganos, acuerdos, operaciones relevantes y cumplimiento de entidades no mercantiles.',
+  },
+  {
+    title: 'Construcción y urbanismo',
+    description:
+      'Promoción, licencias, contratos de obra, garantías y gestión del riesgo jurídico del proyecto.',
+  },
+  {
+    title: 'Subvenciones y ayudas',
+    description:
+      'Encaje, selección priorizada, memoria, presentación, subsanaciones, justificación y cierre del expediente.',
+  },
+];
+---
+
+<section id="soluciones" class="section-acervo bg-white">
+  <div class="container-acervo">
+    <div class="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div class="max-w-3xl">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
+          Soluciones
+        </p>
+
+        <h2 class="mb-6 text-4xl font-semibold tracking-tight text-[var(--color-navy)] md:text-5xl">
+          Casos en los que aportamos dirección, estructura y ejecución.
+        </h2>
+
+        <p class="text-lg text-[var(--color-charcoal)]/80">
+          La web no se organiza solo por áreas jurídicas, sino por situaciones reales de decisión:
+          entrada de socios, financiación, activos, riesgos, reorganizaciones o contingencias.
+        </p>
+      </div>
+
+      <a
+        href="#contacto"
+        class="inline-flex w-fit items-center justify-center rounded-full border border-[var(--color-navy)]/20 px-6 py-3 text-sm font-semibold text-[var(--color-navy)] transition hover:bg-[var(--color-navy)] hover:text-white"
+      >
+        Plantear una situación
+      </a>
+    </div>
+
+    <!-- Soluciones principales -->
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {mainSolutions.map((solution, index) => (
+        <article class="group flex min-h-[320px] flex-col rounded-3xl border border-[var(--color-navy)]/10 bg-[var(--color-cream)] p-7 transition hover:-translate-y-1 hover:border-[var(--color-gold)]/40 hover:bg-white hover:shadow-xl hover:shadow-[var(--color-navy)]/5">
+          <div class="mb-8 flex items-center justify-between">
+            <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-gold)] ring-1 ring-[var(--color-navy)]/10">
+              {solution.tag}
+            </span>
+
+            <span class="font-serif text-3xl font-semibold text-[var(--color-navy)]/20">
+              0{index + 1}
+            </span>
+          </div>
+
+          <h3 class="mb-5 text-[1.65rem] font-semibold leading-tight text-[var(--color-navy)]">
+            {solution.title}
+          </h3>
+
+          <p class="mb-8 text-[15px] leading-7 text-[var(--color-charcoal)]/75">
+            {solution.description}
+          </p>
+
+          <a
+            href="#contacto"
+            class="mt-auto inline-flex items-center text-sm font-semibold text-[var(--color-navy)] transition group-hover:text-[var(--color-gold)]"
+          >
+            Saber más
+            <span class="ml-2 transition group-hover:translate-x-1">→</span>
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <!-- Bloque secundario -->
+    <div class="mt-16 rounded-[2rem] border border-[var(--color-navy)]/10 bg-[var(--color-cream)] p-8 md:p-10">
+      <div class="mb-8 max-w-2xl">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
+          También trabajamos
+        </p>
+
+        <h3 class="text-3xl font-semibold tracking-tight text-[var(--color-navy)] md:text-4xl">
+          Otras líneas relevantes para empresa, entidades, patrimonio y activos.
+        </h3>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2">
+        {secondarySolutions.map((solution) => (
+          <article class="rounded-2xl bg-white p-6 ring-1 ring-[var(--color-navy)]/10">
+            <h4 class="mb-3 text-xl font-semibold text-[var(--color-navy)]">
+              {solution.title}
+            </h4>
+
+            <p class="text-sm leading-7 text-[var(--color-charcoal)]/75">
+              {solution.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

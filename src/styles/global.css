@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/*
+  Variables visuales de ACERVO LexFin.
+  Ajustaremos estos tonos cuando tengamos el logo definitivo en SVG o imagen limpia.
+*/
+:root {
+  --color-navy: #0b253f;
+  --color-charcoal: #343a3d;
+  --color-gold: #b47a3c;
+  --color-cream: #f7f4ef;
+  --color-white: #ffffff;
+  --color-muted: #6b7280;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  Clase reutilizable para limitar el ancho de las secciones.
+*/
+.container-acervo {
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+}
+
+/*
+  Clase base para secciones con espaciado generoso.
+*/
+.section-acervo {
+  padding-block: 48px;
+}
+
+@media (min-width: 1024px) {
+  .section-acervo {
+    padding-block: 80px;
+  }
+}

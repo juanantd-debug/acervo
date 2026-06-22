@@ -1,0 +1,126 @@
+---
+const pillars = [
+  {
+    title: 'Estrategia y estructura societaria',
+    description:
+      'Derecho societario aplicado a decisiones reales: socios, órganos de gobierno, reorganizaciones, acuerdos y documentación clave.',
+    icon: 'structure',
+  },
+  {
+    title: 'Arquitectura financiera y ejecución',
+    description:
+      'Escenarios, cash-flow, estructura de deuda y capital, financiación, subvenciones y hoja de ruta con seguimiento.',
+    icon: 'finance',
+  },
+  {
+    title: 'Fiscalidad compleja y planificación patrimonial',
+    description:
+      'Fiscalidad estratégica, planificación patrimonial y sucesoria, empresa familiar y control del riesgo fiscal en decisiones críticas.',
+    icon: 'tax',
+  },
+  {
+    title: 'Activos inmobiliarios, registral y urbanístico',
+    description:
+      'Due diligence registral, catastral y urbanística, operaciones inmobiliarias, subastas, ejecuciones, NPLs y construcción.',
+    icon: 'realestate',
+  },
+  {
+    title: 'Laboral estratégico y contingencias',
+    description:
+      'Estructuras laborales, políticas internas, reorganizaciones, extinciones, prevención de contingencias y litigación social.',
+    icon: 'labor',
+  },
+];
+
+const renderIcon = (icon: string) => {
+  const icons = {
+    structure: `
+      <path d="M4 20h16" />
+      <path d="M6 20v-8" />
+      <path d="M12 20v-16" />
+      <path d="M18 20v-11" />
+      <path d="M6 12l6 -8l6 5" />
+    `,
+    finance: `
+      <path d="M4 19h16" />
+      <path d="M4 15l4 -4l4 3l6 -8l2 3" />
+      <path d="M14 6h4v4" />
+    `,
+    tax: `
+      <path d="M9 7h6" />
+      <path d="M9 11h6" />
+      <path d="M9 15h4" />
+      <path d="M6 3h12a2 2 0 0 1 2 2v14l-4 -2l-4 2l-4 -2l-4 2v-14a2 2 0 0 1 2 -2z" />
+    `,
+    realestate: `
+      <path d="M3 21h18" />
+      <path d="M5 21v-10l7 -6l7 6v10" />
+      <path d="M9 21v-6h6v6" />
+    `,
+    labor: `
+      <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+      <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+      <path d="M3 11h3" />
+      <path d="M18 11h3" />
+    `,
+  };
+
+  return icons[icon as keyof typeof icons];
+};
+---
+
+<section id="capacidades" class="section-acervo bg-white">
+  <div class="container-acervo">
+    <div class="mb-14 max-w-3xl">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
+        Propuesta de valor
+      </p>
+
+      <h2 class="mb-6 text-4xl font-semibold tracking-tight text-[var(--color-navy)] md:text-5xl">
+        Una visión integrada para decisiones que no admiten improvisación.
+      </h2>
+
+      <p class="text-lg text-[var(--color-charcoal)]/80">
+        ACERVO LexFin combina criterio jurídico, análisis financiero y control documental para
+        transformar situaciones complejas en planes ejecutables, con responsables, hitos y riesgos
+        identificados desde el inicio.
+      </p>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-6">
+      {pillars.map((pillar, index) => (
+        <article
+          class:list={[
+            'group rounded-3xl border border-[var(--color-navy)]/10 bg-[var(--color-cream)] p-7 transition hover:-translate-y-1 hover:border-[var(--color-gold)]/40 hover:bg-white hover:shadow-xl hover:shadow-[var(--color-navy)]/5',
+            'lg:col-span-2',
+            index === 3 && 'lg:col-start-2',
+            index === 4 && 'lg:col-start-4',
+          ]}
+        >
+          <div class="mb-7 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[var(--color-navy)] ring-1 ring-[var(--color-navy)]/10 transition group-hover:bg-[var(--color-navy)] group-hover:text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              set:html={renderIcon(pillar.icon)}
+            />
+          </div>
+
+          <h3 class="mb-4 text-2xl font-semibold text-[var(--color-navy)]">
+            {pillar.title}
+          </h3>
+
+          <p class="text-sm leading-7 text-[var(--color-charcoal)]/75">
+            {pillar.description}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
