@@ -1,4 +1,6 @@
 ---
+import { withBase } from '../lib/withBase';
+
 const currentYear = new Date().getFullYear();
 
 const navItems = [
@@ -21,9 +23,9 @@ const legalItems = [
     <div class="grid gap-12 border-b border-white/10 py-14 lg:grid-cols-[1.1fr_0.9fr_0.9fr]">
       <!-- Marca -->
       <div>
-        <a href="/" class="flex items-center" aria-label="Ir al inicio de ACERVO LexFin">
+        <a href={withBase('/')} class="flex items-center" aria-label="Ir al inicio de ACERVO LexFin">
         <img
-            src="/images/acervo-logo.png"
+            src={withBase('/images/acervo-logo.png')}
             alt="ACERVO LexFin"
             class="h-14 w-auto"
         />
@@ -63,7 +65,7 @@ const legalItems = [
         <nav class="grid gap-3" aria-label="Enlaces legales">
           {legalItems.map((item) => (
             <a
-              href={item.href}
+              href={withBase(item.href)}
               class="text-sm text-white/70 transition hover:text-white"
             >
               {item.label}

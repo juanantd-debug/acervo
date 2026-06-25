@@ -1,4 +1,6 @@
 ---
+import { withBase } from '../lib/withBase';
+
 interface Props {
   title: string;
   description: string;
@@ -12,7 +14,7 @@ const {
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://www.acervolexfin.com');
-const imageUrl = new URL(image, Astro.site ?? 'https://www.acervolexfin.com');
+const imageUrl = new URL(withBase(image), Astro.site ?? 'https://www.acervolexfin.com');
 ---
 
 <meta charset="UTF-8" />
@@ -22,7 +24,7 @@ const imageUrl = new URL(image, Astro.site ?? 'https://www.acervolexfin.com');
 <title>{title}</title>
 
 <link rel="canonical" href={canonicalUrl} />
-<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="sitemap" href={withBase('/sitemap-index.xml')} />
 
 <!-- Open Graph -->
 <meta property="og:title" content={title} />
@@ -40,4 +42,4 @@ const imageUrl = new URL(image, Astro.site ?? 'https://www.acervolexfin.com');
 <meta name="twitter:image" content={imageUrl} />
 
 <!-- Favicon provisional -->
-<link rel="icon" type="image/png" href="/images/acervo-logo.png" />
+<link rel="icon" type="image/png" href={withBase('/images/acervo-logo.png')} />

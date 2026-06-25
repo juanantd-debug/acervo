@@ -5,10 +5,10 @@
   Ajustaremos estos tonos cuando tengamos el logo definitivo en SVG o imagen limpia.
 */
 :root {
-  --color-navy: #0b253f;
-  --color-charcoal: #343a3d;
-  --color-gold: #b47a3c;
-  --color-cream: #f7f4ef;
+  --color-navy: #2f6048;
+  --color-charcoal: #2a3a31;
+  --color-gold: #c9a55e;
+  --color-cream: #f4f0e7;
   --color-white: #ffffff;
   --color-muted: #6b7280;
 

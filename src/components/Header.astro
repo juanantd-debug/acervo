@@ -1,4 +1,6 @@
 ---
+import { withBase } from '../lib/withBase';
+
 const navItems = [
   { label: 'Soluciones', href: '#soluciones' },
   { label: 'Capacidades', href: '#capacidades' },
@@ -11,7 +13,7 @@ const navItems = [
 <header class="fixed left-0 top-0 z-50 w-full border-b border-[var(--color-navy)]/10 bg-[var(--color-cream)]/85 backdrop-blur-xl">
   <div class="container-acervo flex h-20 items-center justify-between">
     <!-- Logo textual provisional. Más adelante lo sustituiremos por SVG definitivo. -->
-    <a href="/" class="group flex items-center gap-3" aria-label="Ir al inicio">
+    <a href={withBase('/')} class="group flex items-center gap-3" aria-label="Ir al inicio">
       <div class="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-navy)]/15 bg-white">
         <span class="font-serif text-xl font-bold text-[var(--color-navy)]">A</span>
       </div>

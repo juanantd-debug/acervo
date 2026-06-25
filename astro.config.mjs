@@ -6,7 +6,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.acervolexfin.com',
+  site: 'https://juanantd-debug.github.io',
+  base: '/acervo',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
