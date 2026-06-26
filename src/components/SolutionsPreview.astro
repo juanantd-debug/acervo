@@ -66,7 +66,7 @@ const secondarySolutions = [
   <div class="container-acervo">
     <div class="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
       <div class="max-w-3xl">
-        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
+        <p class="mb-4 text-lg font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
           Soluciones
         </p>
 
@@ -74,15 +74,14 @@ const secondarySolutions = [
           Casos en los que aportamos dirección, estructura y ejecución.
         </h2>
 
-        <p class="text-lg text-[var(--color-charcoal)]/80">
-          La web no se organiza solo por áreas jurídicas, sino por situaciones reales de decisión:
-          entrada de socios, financiación, activos, riesgos, reorganizaciones o contingencias.
+        <p class="text-xl font-medium text-[var(--color-charcoal)]/80">
+          Situaciones reales, no categorías genéricas. Cada caso tiene su estructura y su hoja de ruta.
         </p>
       </div>
 
       <a
         href="#contacto"
-        class="inline-flex w-fit items-center justify-center rounded-full border border-[var(--color-navy)]/20 px-6 py-3 text-sm font-semibold text-[var(--color-navy)] transition hover:bg-[var(--color-navy)] hover:text-white"
+        class="inline-flex w-fit items-center justify-center rounded-full border border-[var(--color-navy)]/20 px-6 py-3 text-base font-semibold text-[var(--color-navy)] transition hover:bg-[var(--color-navy)] hover:text-white"
       >
         Plantear una situación
       </a>
@@ -93,7 +92,7 @@ const secondarySolutions = [
       {mainSolutions.map((solution, index) => (
         <article class="group flex min-h-[320px] flex-col rounded-3xl border border-[var(--color-navy)]/10 bg-[var(--color-cream)] p-7 transition hover:-translate-y-1 hover:border-[var(--color-gold)]/40 hover:bg-white hover:shadow-xl hover:shadow-[var(--color-navy)]/5">
           <div class="mb-8 flex items-center justify-between">
-            <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-gold)] ring-1 ring-[var(--color-navy)]/10">
+            <span class="rounded-full bg-white px-3 py-1 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-gold)] ring-1 ring-[var(--color-navy)]/10">
               {solution.tag}
             </span>
 
@@ -106,13 +105,13 @@ const secondarySolutions = [
             {solution.title}
           </h3>
 
-          <p class="mb-8 text-[15px] leading-7 text-[var(--color-charcoal)]/75">
+          <p class="mb-8 text-lg leading-7 text-[var(--color-charcoal)]/75">
             {solution.description}
           </p>
 
           <a
             href="#contacto"
-            class="mt-auto inline-flex items-center text-sm font-semibold text-[var(--color-navy)] transition group-hover:text-[var(--color-gold)]"
+            class="mt-auto inline-flex items-center text-base font-semibold text-[var(--color-navy)] transition group-hover:text-[var(--color-gold)]"
           >
             Saber más
             <span class="ml-2 transition group-hover:translate-x-1">→</span>
@@ -124,7 +123,7 @@ const secondarySolutions = [
     <!-- Bloque secundario -->
     <div class="mt-16 rounded-[2rem] border border-[var(--color-navy)]/10 bg-[var(--color-cream)] p-8 md:p-10">
       <div class="mb-8 max-w-2xl">
-        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
+        <p class="mb-3 text-lg font-semibold uppercase tracking-[0.28em] text-[var(--color-gold)]">
           También trabajamos
         </p>
 
@@ -140,7 +139,7 @@ const secondarySolutions = [
               {solution.title}
             </h4>
 
-            <p class="text-sm leading-7 text-[var(--color-charcoal)]/75">
+            <p class="text-lg leading-7 text-[var(--color-charcoal)]/75">
               {solution.description}
             </p>
           </article>

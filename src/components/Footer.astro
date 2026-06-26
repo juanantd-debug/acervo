@@ -31,7 +31,7 @@ const legalItems = [
         />
         </a>
 
-        <p class="max-w-md text-sm leading-7 text-white/70">
+        <p class="max-w-md text-base leading-7 text-white/70">
           Despacho jurídico-financiero para decisiones complejas de empresa, entidades,
           patrimonio y activos. Gobernanza, dirección financiera externa, fiscalidad compleja,
           laboral estratégico y activos inmobiliarios.
@@ -40,7 +40,7 @@ const legalItems = [
 
       <!-- Navegación -->
       <div>
-        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">
+        <p class="mb-5 text-lg font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">
           Navegación
         </p>
 
@@ -48,7 +48,7 @@ const legalItems = [
           {navItems.map((item) => (
             <a
               href={item.href}
-              class="text-sm text-white/70 transition hover:text-white"
+              class="text-base text-white/70 transition hover:text-white"
             >
               {item.label}
             </a>
@@ -58,7 +58,7 @@ const legalItems = [
 
       <!-- Legal -->
       <div>
-        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">
+        <p class="mb-5 text-lg font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">
           Información legal
         </p>
 
@@ -66,21 +66,21 @@ const legalItems = [
           {legalItems.map((item) => (
             <a
               href={withBase(item.href)}
-              class="text-sm text-white/70 transition hover:text-white"
+              class="text-base text-white/70 transition hover:text-white"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <p class="mt-6 text-sm leading-7 text-white/55">
+        <p class="mt-6 text-base leading-7 text-white/55">
           Los textos legales deberán revisarse y completarse con los datos reales de la titularidad,
           domicilio, NIF/CIF, responsable del tratamiento y demás información exigible.
         </p>
       </div>
     </div>
 
-    <div class="flex flex-col gap-4 py-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
+    <div class="flex flex-col gap-4 py-6 text-base text-white/55 md:flex-row md:items-center md:justify-between">
       <p>
         © {currentYear} ACERVO LexFin. Todos los derechos reservados.
       </p>
