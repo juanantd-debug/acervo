@@ -2,8 +2,8 @@
 import { withBase } from '../lib/withBase';
 
 const navItems = [
-  { label: 'Capacidades', href: '/#capacidades' },  
-    { label: 'Método', href: '/#metodo' },
+  { label: 'Capacidades', href: '/#capacidades' },
+  { label: 'Método', href: '/#metodo' },
   { label: 'Soluciones', href: '/#soluciones' },
   { label: 'Sobre', href: '/#sobre' },
   { label: 'Contacto', href: '/#contacto' },
@@ -12,20 +12,23 @@ const navItems = [
 
 <header class="fixed left-0 top-0 z-50 w-full border-b border-[var(--color-navy)]/10 bg-[var(--color-cream)]/85 backdrop-blur-xl">
   <div class="container-acervo flex h-20 items-center justify-between">
-    <a href={withBase('/')} class="group flex items-center gap-3" aria-label="Ir al inicio">
-      <div class="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-navy)]/15 bg-white">
-        <span class="font-serif text-xl font-bold text-[var(--color-navy)]">A</span>
-      </div>
+<a href={withBase('/')} class="group flex items-center gap-3" aria-label="Ir al inicio">
+  <img 
+    src={withBase('/images/logo.png')} 
+    alt="Logo ACERVO" 
+    class="h-11 w-auto" 
+  />
 
-      <div class="leading-none">
-        <p class="text-base font-semibold uppercase tracking-[0.24em] text-[var(--color-navy)]">
-          ACERVO
-        </p>
-        <p class="mt-1 text-sm font-medium uppercase tracking-[0.34em] text-[var(--color-charcoal)]">
-          LexFin
-        </p>
-      </div>
-    </a>
+  <div class="flex flex-col items-center leading-none">
+    <span class="font-serif text-xl tracking-[0.32em] text-[var(--color-navy)]">
+      ACERVO
+    </span>
+
+    <span class="mt-1 text-[10px] font-semibold tracking-[0.45em] text-[var(--color-charcoal)]">
+      LEXFIN
+    </span>
+  </div>
+</a>
 
     <!-- Navegación desktop -->
     <nav class="hidden items-center gap-8 lg:flex" aria-label="Navegación principal">
